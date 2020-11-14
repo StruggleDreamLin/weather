@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--线条样式-->
+    <attr name="lineStyle" format="enum">
+        <enum name="polyline" value="0" /> <!--折线-->
+        <enum name="curve" value="1" />    <!--曲线-->
+    </attr>
+    <attr name="itemWidth" format="dimension" />
+    <!--温度对应Dp缩放 如1度等于1dp 默认1度等于3dp-->
+    <attr name="temperatureScale" format="dimension" />
+    <!--贝塞尔曲线控制点系数 0.1 - 0.4 效果较佳 -->
+    <attr name="bezierFactor" format="float" />
+    <attr name="shadowRadius" format="dimension" />
+    <attr name="shadowDx" format="dimension" />
+    <attr name="shadowDy" format="dimension" />
+    <!--点半径-->
+    <attr name="nodeRadius" format="dimension" />
+    <!--线宽-->
+    <attr name="strokeWidth" format="dimension" />
+    <!--虚线长度-->
+    <attr name="dashAdvance" format="dimension" />
+    <!--虚线间隔-->
+    <attr name="dashGap" format="dimension" />
+    <!--点是否实心-->
+    <attr name="solid" format="boolean" />
+    <!--是否开启虚线 配合todayIndex使用 只有今日之前的item绘制成虚线-->
+    <attr name="dashEnable" format="boolean" />
+
+    <declare-styleable name="WeatherHoursView">
+        <attr name="itemWidth" />
+        <attr name="temperatureScale" />
+        <attr name="bezierFactor" />
+        <attr name="lineStyle" />
+        <attr name="lineColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowRadius" />
+        <attr name="shadowDx" />
+        <attr name="shadowDy" />
+        <attr name="nodeRadius" />
+        <attr name="strokeWidth" />
+        <attr name="solid" />
+        <attr name="dashEnable" />
+        <attr name="dashAdvance" />
+        <attr name="dashGap" />
+    </declare-styleable>
+
+    <declare-styleable name="WeatherDaysView">
+        <attr name="itemWidth" />
+        <attr name="temperatureScale" />
+        <attr name="bezierFactor" />
+        <attr name="lineStyle" />
+        <attr name="dayColor" format="color" />
+        <attr name="nightColor" format="color" />
+        <attr name="dayShadowColor" format="color" />
+        <attr name="nightShadowColor" format="color" />
+        <attr name="shadowRadius" />
+        <attr name="shadowDx" />
+        <attr name="shadowDy" />
+        <attr name="nodeRadius" />
+        <attr name="strokeWidth" />
+        <attr name="solid" />
+        <attr name="dashEnable" />
+        <attr name="dashAdvance" />
+        <attr name="dashGap" />
+    </declare-styleable>
+</resources>

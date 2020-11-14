@@ -1,0 +1,3 @@
+include ':weatherview'
+include ':app'
+rootProject.name = "WeaterView"
