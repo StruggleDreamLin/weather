@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorF1F5FC" />
+
+    <TextView
+        android:id="@+id/tvWeekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="今天"
+        android:textColor="@color/color303741"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWeekDay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="10/13"
+        android:textColor="@color/color_84898E"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tvDayTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDayWeatherDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="22°"
+        android:textColor="@color/color303741"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivDayWeather"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_sunny" />
+
+    <TextView
+        android:id="@+id/tvDayWeatherDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivDayWeather"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="晴转多云"
+        android:textColor="@color/color303741"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!--****温度线占位 必须项，请勿修改Id 计算确定高度****-->
+    <View
+        android:id="@+id/chartHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tvDayTemperature"
+        android:layout_marginTop="12dp" />
+
+
+    <TextView
+        android:id="@+id/tvNightTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chartHolder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="22°"
+        android:textColor="@color/color303741"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNightWeatherDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNightTemperature"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="晴转多云"
+        android:textColor="@color/color303741"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivNightWeather"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tvNightWeatherDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_sunny" />
+
+    <TextView
+        android:id="@+id/tvWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivNightWeather"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text="东北风"
+        android:textColor="@color/color_84898E"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvWindLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWindDir"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="2级"
+        android:textColor="@color/color_84898E"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWindLevel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/shape_air_level1"
+        android:gravity="center"
+        android:minWidth="42dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="轻度"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvAir"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorF1F5FC" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/bottomLine"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorF1F5FC" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLine"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/dash" />
+
+</RelativeLayout>
